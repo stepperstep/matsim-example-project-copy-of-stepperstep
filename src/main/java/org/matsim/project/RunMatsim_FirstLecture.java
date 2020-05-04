@@ -36,7 +36,7 @@ import java.util.List;
  * @author nagel
  *
  */
-public class RunMatsim{
+public class RunMatsim_FirstLecture {
 
 	public static void main(String[] args) {
 		// possibly modify config here
@@ -54,7 +54,7 @@ public class RunMatsim{
 		Scenario scenario = ScenarioUtils.loadScenario(config) ;
 		
 		// possibly modify scenario here
-/*		Id<Person> interestingPersonId = Id.createPersonId(1);
+		Id<Person> interestingPersonId = Id.createPersonId(1);
 		List<Id<Person>> personsToRemove = new ArrayList<>();
 
 		for (Id<Person> personId : scenario.getPopulation().getPersons().keySet()) {
@@ -86,15 +86,13 @@ public class RunMatsim{
 		plan.addActivity(workActivity);
 
 		person2.addPlan(plan);
-*/		// ---
+		// ---
 		
-//		Controler controler = new Controler( scenario ) ;
-//		controler.run();
-		// possibly modify controler here
+
 		Controler controler = new Controler( scenario ) ;
 		controler.addOverridingModule( new OTFVisLiveModule() ) ;
 		controler.run();
-//		controler.addOverridingModule( new OTFVisLiveModule() ) ;
+
 		
 		// ---
 		
