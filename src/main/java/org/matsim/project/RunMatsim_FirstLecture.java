@@ -83,6 +83,7 @@ public class RunMatsim_FirstLecture {
 		plan.addLeg(leg);
 
 		Activity workActivity = populationFactory.createActivityFromLinkId("w", Id.createLinkId(1));
+		workActivity.setEndTime(17*60+60.);
 		plan.addActivity(workActivity);
 
 		person2.addPlan(plan);
