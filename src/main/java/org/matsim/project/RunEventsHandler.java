@@ -12,11 +12,14 @@ public class RunEventsHandler {
 
         EventsManager eventsManager = EventsUtils.createEventsManager();
 
-        SimpleEventHandler eventHandler = new SimpleEventHandler();
+/*        SimpleEventHandler eventHandler = new SimpleEventHandler();
         eventsManager.addHandler(eventHandler);
-
+*/
         MatsimEventsReader eventsReader = new MatsimEventsReader(eventsManager); //reads the file and gives informations to the Eventhandler
         eventsReader.readFile(inputFile);
+
+        NewEventHandler LinkEventHandler = new NewEventHandler();
+        eventsManager.addHandler(LinkEventHandler);
 
 
     }
