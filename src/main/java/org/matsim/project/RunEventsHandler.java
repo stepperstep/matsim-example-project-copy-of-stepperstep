@@ -9,18 +9,18 @@ public class RunEventsHandler {
     public static void main(String[] args) {
 
         String inputFile = "output1/output_events.xml.gz";
+        String outputFile = "output1/link6volumes.txt";
 
         EventsManager eventsManager = EventsUtils.createEventsManager();
 
-/*        SimpleEventHandler eventHandler = new SimpleEventHandler();
-        eventsManager.addHandler(eventHandler);
-*/
+        LinkEventHandler linkEventHandler = new LinkEventHandler(outputFile);
+        eventsManager.addHandler(linkEventHandler);
+        
         MatsimEventsReader eventsReader = new MatsimEventsReader(eventsManager); //reads the file and gives informations to the Eventhandler
         eventsReader.readFile(inputFile);
 
-        NewEventHandler LinkEventHandler = new NewEventHandler();
-        eventsManager.addHandler(LinkEventHandler);
 
 
+    linkEventHandler.printResult();
     }
 }
