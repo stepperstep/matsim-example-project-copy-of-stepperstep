@@ -15,7 +15,7 @@ public class RunEventsHandler {
 
         LinkEventHandler linkEventHandler = new LinkEventHandler(outputFile);
         eventsManager.addHandler(linkEventHandler);
-        
+
         MatsimEventsReader eventsReader = new MatsimEventsReader(eventsManager); //reads the file and gives informations to the Eventhandler
         eventsReader.readFile(inputFile);
 
