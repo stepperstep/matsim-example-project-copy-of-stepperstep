@@ -14,7 +14,7 @@ import org.matsim.core.scenario.ScenarioUtils;
 public class RunMultiModalExample {
     public static void main(String[] args) {
 
-        Config config = ConfigUtils.loadConfig("scenarios/equil/config.xml");
+/*        Config config = ConfigUtils.loadConfig("scenarios/equil/config.xml");
 
         config.controler().setOverwriteFileSetting(OutputDirectoryHierarchy.OverwriteFileSetting.deleteDirectoryIfExists);
         config.controler().setLastIteration(3);
@@ -38,7 +38,7 @@ public class RunMultiModalExample {
 
         Controler controler = new Controler(scenario);
 
-        controler.run();
+        controler.run(); */
 
     }
 }
